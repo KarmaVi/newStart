@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{460D0BC0-C60B-9A7A-C236-8082EA9B9D0D}</ProjectGuid>
+    <ProjectGuid>{29678A11-74AE-90DA-22C4-21E638F6ECF2}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -65,11 +65,99 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\AurynSky\Gems Ultimate Pack\Scripts\AnimationScript.cs" />
+    <Compile Include="Assets\Scripts\BeholderPBRmmob.cs" />
     <Compile Include="Assets\Scripts\MonSpawner.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
+    <Compile Include="Assets\SteamCity\PostProcessing\Runtime\Attributes\GetSetAttribute.cs" />
+    <Compile Include="Assets\SteamCity\PostProcessing\Runtime\Attributes\MinAttribute.cs" />
+    <Compile Include="Assets\SteamCity\PostProcessing\Runtime\Attributes\TrackballAttribute.cs" />
+    <Compile Include="Assets\SteamCity\PostProcessing\Runtime\Attributes\TrackballGroupAttribute.cs" />
+    <Compile Include="Assets\SteamCity\PostProcessing\Runtime\Components\AmbientOcclusionComponent.cs" />
+    <Compile Include="Assets\SteamCity\PostProcessing\Runtime\Components\BloomComponent.cs" />
+    <Compile Include="Assets\SteamCity\PostProcessing\Runtime\Components\BuiltinDebugViewsComponent.cs" />
+    <Compile Include="Assets\SteamCity\PostProcessing\Runtime\Components\ChromaticAberrationComponent.cs" />
+    <Compile Include="Assets\SteamCity\PostProcessing\Runtime\Components\ColorGradingComponent.cs" />
+    <Compile Include="Assets\SteamCity\PostProcessing\Runtime\Components\DepthOfFieldComponent.cs" />
+    <Compile Include="Assets\SteamCity\PostProcessing\Runtime\Components\DitheringComponent.cs" />
+    <Compile Include="Assets\SteamCity\PostProcessing\Runtime\Components\EyeAdaptationComponent.cs" />
+    <Compile Include="Assets\SteamCity\PostProcessing\Runtime\Components\FogComponent.cs" />
+    <Compile Include="Assets\SteamCity\PostProcessing\Runtime\Components\FxaaComponent.cs" />
+    <Compile Include="Assets\SteamCity\PostProcessing\Runtime\Components\GrainComponent.cs" />
+    <Compile Include="Assets\SteamCity\PostProcessing\Runtime\Components\MotionBlurComponent.cs" />
+    <Compile Include="Assets\SteamCity\PostProcessing\Runtime\Components\ScreenSpaceReflectionComponent.cs" />
+    <Compile Include="Assets\SteamCity\PostProcessing\Runtime\Components\TaaComponent.cs" />
+    <Compile Include="Assets\SteamCity\PostProcessing\Runtime\Components\UserLutComponent.cs" />
+    <Compile Include="Assets\SteamCity\PostProcessing\Runtime\Components\VignetteComponent.cs" />
+    <Compile Include="Assets\SteamCity\PostProcessing\Runtime\Models\AmbientOcclusionModel.cs" />
+    <Compile Include="Assets\SteamCity\PostProcessing\Runtime\Models\AntialiasingModel.cs" />
+    <Compile Include="Assets\SteamCity\PostProcessing\Runtime\Models\BloomModel.cs" />
+    <Compile Include="Assets\SteamCity\PostProcessing\Runtime\Models\BuiltinDebugViewsModel.cs" />
+    <Compile Include="Assets\SteamCity\PostProcessing\Runtime\Models\ChromaticAberrationModel.cs" />
+    <Compile Include="Assets\SteamCity\PostProcessing\Runtime\Models\ColorGradingModel.cs" />
+    <Compile Include="Assets\SteamCity\PostProcessing\Runtime\Models\DepthOfFieldModel.cs" />
+    <Compile Include="Assets\SteamCity\PostProcessing\Runtime\Models\DitheringModel.cs" />
+    <Compile Include="Assets\SteamCity\PostProcessing\Runtime\Models\EyeAdaptationModel.cs" />
+    <Compile Include="Assets\SteamCity\PostProcessing\Runtime\Models\FogModel.cs" />
+    <Compile Include="Assets\SteamCity\PostProcessing\Runtime\Models\GrainModel.cs" />
+    <Compile Include="Assets\SteamCity\PostProcessing\Runtime\Models\MotionBlurModel.cs" />
+    <Compile Include="Assets\SteamCity\PostProcessing\Runtime\Models\ScreenSpaceReflectionModel.cs" />
+    <Compile Include="Assets\SteamCity\PostProcessing\Runtime\Models\UserLutModel.cs" />
+    <Compile Include="Assets\SteamCity\PostProcessing\Runtime\Models\VignetteModel.cs" />
+    <Compile Include="Assets\SteamCity\PostProcessing\Runtime\PostProcessingBehaviour.cs" />
+    <Compile Include="Assets\SteamCity\PostProcessing\Runtime\PostProcessingComponent.cs" />
+    <Compile Include="Assets\SteamCity\PostProcessing\Runtime\PostProcessingContext.cs" />
+    <Compile Include="Assets\SteamCity\PostProcessing\Runtime\PostProcessingModel.cs" />
+    <Compile Include="Assets\SteamCity\PostProcessing\Runtime\PostProcessingProfile.cs" />
+    <Compile Include="Assets\SteamCity\PostProcessing\Runtime\Utils\ColorGradingCurve.cs" />
+    <Compile Include="Assets\SteamCity\PostProcessing\Runtime\Utils\GraphicsUtils.cs" />
+    <Compile Include="Assets\SteamCity\PostProcessing\Runtime\Utils\MaterialFactory.cs" />
+    <Compile Include="Assets\SteamCity\PostProcessing\Runtime\Utils\RenderTextureFactory.cs" />
+    <Compile Include="Assets\SteamCity\PostProcessing\Utilities\CustomMotionTexture\ExampleWheelController.cs" />
+    <None Include="Assets\SteamCity\PostProcessing\Resources\Shaders\ScreenSpaceReflection.shader" />
+    <None Include="Assets\SteamCity\PostProcessing\Resources\Shaders\GrainGen.shader" />
+    <None Include="Assets\SteamCity\PostProcessing\Editor Resources\Monitors\HistogramCompute.compute" />
+    <None Include="Assets\SteamCity\PostProcessing\Resources\Shaders\FXAA3.cginc" />
+    <None Include="Assets\SteamCity\PostProcessing\Resources\Shaders\EyeAdaptation.shader" />
+    <None Include="Assets\SteamCity\PostProcessing\Utilities\CustomMotionTexture\Shaders\CustomMotionVectorTexture.shader" />
+    <None Include="Assets\SteamCity\PostProcessing\Editor Resources\UI\CurveBackground.shader" />
+    <None Include="Assets\SteamCity\PostProcessing\Resources\Shaders\BuiltinDebugViews.shader" />
+    <None Include="Assets\SteamCity\PostProcessing\Resources\Shaders\EyeAdaptation.cginc" />
+    <None Include="Assets\SteamCity\PostProcessing\Resources\Shaders\LutGen.shader" />
+    <None Include="Assets\SteamCity\PostProcessing\Resources\Shaders\EyeHistogram.compute" />
+    <None Include="Assets\SteamCity\PostProcessing\Resources\Shaders\TAA.cginc" />
+    <None Include="Assets\SteamCity\PostProcessing\Resources\Shaders\AmbientOcclusion.cginc" />
     <None Include="Assets\AurynSky\Gems Ultimate Pack\READ ME.txt" />
+    <None Include="Assets\SteamCity\PostProcessing\Editor Resources\Monitors\VectorscopeCompute.compute" />
+    <None Include="Assets\SteamCity\PostProcessing\Resources\Shaders\ColorGrading.cginc" />
+    <None Include="Assets\SteamCity\PostProcessing\Editor Resources\Monitors\HistogramRender.shader" />
+    <None Include="Assets\SteamCity\PostProcessing\Resources\Shaders\UberSecondPass.cginc" />
+    <None Include="Assets\SteamCity\PostProcessing\Resources\Bluenoise64\LICENSE.txt" />
+    <None Include="Assets\SteamCity\PostProcessing\Resources\Shaders\ACES.cginc" />
+    <None Include="Assets\SteamCity\PostProcessing\Resources\Shaders\MotionBlur.cginc" />
+    <None Include="Assets\SteamCity\PostProcessing\Resources\Shaders\AmbientOcclusion.shader" />
+    <None Include="Assets\SteamCity\PostProcessing\Resources\Shaders\FXAA.shader" />
+    <None Include="Assets\SteamCity\ReadMe.txt" />
+    <None Include="Assets\SteamCity\PostProcessing\Resources\Shaders\ScreenSpaceRaytrace.cginc" />
+    <None Include="Assets\SteamCity\PostProcessing\Resources\Shaders\Tonemapping.cginc" />
+    <None Include="Assets\SteamCity\PostProcessing\Resources\Shaders\Fog.shader" />
+    <None Include="Assets\SteamCity\PostProcessing\Editor Resources\Monitors\ParadeRender.shader" />
+    <None Include="Assets\SteamCity\PostProcessing\Resources\Shaders\MotionBlur.shader" />
+    <None Include="Assets\SteamCity\PostProcessing\Resources\Shaders\DiskKernels.cginc" />
+    <None Include="Assets\SteamCity\PostProcessing\Resources\Bluenoise64\COPYING.txt" />
+    <None Include="Assets\SteamCity\PostProcessing\Editor Resources\UI\Trackball.shader" />
+    <None Include="Assets\SteamCity\PostProcessing\Editor Resources\Monitors\WaveformRender.shader" />
     <None Include="Assets\JKT_ART\etc\MatCap.shader" />
+    <None Include="Assets\SteamCity\PostProcessing\Resources\Shaders\Common.cginc" />
+    <None Include="Assets\SteamCity\PostProcessing\Editor Resources\Monitors\VectorscopeRender.shader" />
+    <None Include="Assets\SteamCity\PostProcessing\Resources\Shaders\Bloom.shader" />
+    <None Include="Assets\SteamCity\PostProcessing\Resources\Shaders\Uber.shader" />
+    <None Include="Assets\SteamCity\PostProcessing\Resources\Shaders\DepthOfField.shader" />
+    <None Include="Assets\SteamCity\PostProcessing\Resources\Shaders\TAA.shader" />
+    <None Include="Assets\SteamCity\PostProcessing\Resources\Shaders\Blit.shader" />
+    <None Include="Assets\SteamCity\PostProcessing\Resources\Shaders\Bloom.cginc" />
     <None Include="Assets\JJ_Oriental Fantasy Character - Berserker Grade 0_v1.1\Readme.txt" />
+    <None Include="Assets\SteamCity\PostProcessing\Editor Resources\Monitors\WaveformCompute.compute" />
+    <None Include="Assets\SteamCity\PostProcessing\Resources\Shaders\DepthOfField.cginc" />
     <Reference Include="UnityEngine">
       <HintPath>A:/unity/2019.4.5f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
@@ -599,31 +687,31 @@
       <HintPath>A:/unity/2019.4.5f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Xml.Serialization.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline.Editor">
-      <HintPath>A:/game/my game/Time to create a game/Datsko.Game/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+      <HintPath>A:/game/my game/Time to create a game/newStart/newStart/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-      <HintPath>A:/game/my game/Time to create a game/Datsko.Game/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+      <HintPath>A:/game/my game/Time to create a game/newStart/newStart/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>A:/game/my game/Time to create a game/Datsko.Game/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>A:/game/my game/Time to create a game/newStart/newStart/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>A:/game/my game/Time to create a game/Datsko.Game/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+      <HintPath>A:/game/my game/Time to create a game/newStart/newStart/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-      <HintPath>A:/game/my game/Time to create a game/Datsko.Game/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+      <HintPath>A:/game/my game/Time to create a game/newStart/newStart/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>A:/game/my game/Time to create a game/Datsko.Game/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>A:/game/my game/Time to create a game/newStart/newStart/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-      <HintPath>A:/game/my game/Time to create a game/Datsko.Game/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+      <HintPath>A:/game/my game/Time to create a game/newStart/newStart/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>A:/game/my game/Time to create a game/Datsko.Game/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>A:/game/my game/Time to create a game/newStart/newStart/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-      <HintPath>A:/game/my game/Time to create a game/Datsko.Game/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>A:/game/my game/Time to create a game/newStart/newStart/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup></ItemGroup>
