@@ -67,7 +67,13 @@
     <Compile Include="Assets\AurynSky\Gems Ultimate Pack\Scripts\AnimationScript.cs" />
     <Compile Include="Assets\Scripts\BeholderPBRmmob.cs" />
     <Compile Include="Assets\Scripts\MonSpawner.cs" />
-    <Compile Include="Assets\Scripts\PlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\MonsterAttack.cs" />
+    <Compile Include="Assets\Scripts\PlayerMovements.cs" />
+    <Compile Include="Assets\Scripts\ScriptsHome\BoomMushroom.cs" />
+    <Compile Include="Assets\Scripts\ScriptsHome\MushroomCall.cs" />
+    <Compile Include="Assets\Scripts\ScriptsHome\SferaMovements.cs" />
+    <Compile Include="Assets\Scripts\ScriptsHome\SpawnMonster.cs" />
+    <Compile Include="Assets\Scripts\ScriptsHome\WalkMonsterPlayer.cs" />
     <Compile Include="Assets\SteamCity\PostProcessing\Runtime\Attributes\GetSetAttribute.cs" />
     <Compile Include="Assets\SteamCity\PostProcessing\Runtime\Attributes\MinAttribute.cs" />
     <Compile Include="Assets\SteamCity\PostProcessing\Runtime\Attributes\TrackballAttribute.cs" />
