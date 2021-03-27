@@ -455,7 +455,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1462e84b2df78b64b933aa99ff4b0e47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
 --- !u!1 &80638617
 GameObject:
   m_ObjectHideFlags: 0
@@ -4034,6 +4033,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1237592831}
   - component: {fileID: 1237592832}
+  - component: {fileID: 1237592833}
   m_Layer: 0
   m_Name: MonSpawner
   m_TagString: Untagged
@@ -4068,6 +4068,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _mon: {fileID: 1818861082154570, guid: 5e45c8f884f6d124ea0499aae7fdbec8, type: 3}
+--- !u!114 &1237592833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1237592830}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60f712c7436834e409dd28004cb4aa43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Damage: 100
+  anim: {fileID: 0}
 --- !u!1 &1243776345
 GameObject:
   m_ObjectHideFlags: 0

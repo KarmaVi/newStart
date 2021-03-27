@@ -197,7 +197,7 @@ public class PlayerMovements : MonoBehaviour
     
     IEnumerator AttackToMonster()
     {
-        if (Physics.Raycast(transform.position, transform.forward, out var hit, 2f))
+        if (Physics.Raycast(transform.position, transform.forward, out var hit, 1f))
         {
             var enemy = hit.transform.gameObject.GetComponent<MonsterAttack>();
             enemy.transform.gameObject.GetComponent<MonsterAttack>().DamageMonster(damage);
