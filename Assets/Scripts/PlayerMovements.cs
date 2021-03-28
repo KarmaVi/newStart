@@ -48,7 +48,6 @@ public class PlayerMovements : MonoBehaviour
     Transform rotate;
 
     //Монстры
-    
     public float damage;
     public LayerMask mask;
     GameObject MonsterAttack;
@@ -170,6 +169,7 @@ public class PlayerMovements : MonoBehaviour
                 isAttack = false;
             }
             anim.SetBool("isAttack", isAttack);
+            Debug.Log(isAttack);
             //Pычаг у дерева
             float direction = lever.transform.position.x - transform.position.x;
             if (Input.GetKeyDown(KeyCode.E) && (Mathf.Abs(direction) < 1))

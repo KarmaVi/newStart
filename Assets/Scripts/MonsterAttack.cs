@@ -1,14 +1,17 @@
 ﻿using System.Collections;
 using UnityEngine;
-
+using UnityEngine.UI;
 
 public class MonsterAttack : MonoBehaviour
 {
     private float damage = 0.1f;
+    public float fill;
     public Animator anim;
+    public Image HealthBar;
+    public LayerMask mask;
     float health = 1f;
+    bool isDie = false;
     GameObject player;
-    
     private void Awake()
     {
         anim = GetComponent<Animator>();
@@ -36,7 +39,7 @@ public class MonsterAttack : MonoBehaviour
             anim.SetBool("Dizzy", true);
             anim.SetBool("isDie", true);
         }
-        Debug.Log(health);
+        
     }
     IEnumerator AttackToPlayer()
     {
@@ -54,5 +57,6 @@ public class MonsterAttack : MonoBehaviour
         {
             health -= damage * Time.deltaTime;
         }
+        HealthBar.fillAmount = health;
     }
 }
