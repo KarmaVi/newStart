@@ -1,5 +1,4 @@
-﻿
-using UnityEngine;
+﻿using UnityEngine;
 
 public class MonSpawner : MonoBehaviour
 {
@@ -8,7 +7,7 @@ public class MonSpawner : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(1))
             Instantiate(_mon, transform.position, Quaternion.identity);
     }
 }
