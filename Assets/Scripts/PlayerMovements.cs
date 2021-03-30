@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class PlayerMovements : MonoBehaviour
 {
     // Константы
-    const float coyoteDelay = 0.1f;
+    const float СoyoteDelay = 0.1f;
 
     // На движение
     enum InputType
@@ -19,12 +19,12 @@ public class PlayerMovements : MonoBehaviour
     private float maxBackwardSpeed = 4f;
     private float maxRotateSpeed = 150f;
     private float rotateAcceleration = 600f;
-    float airborneTime;
-    float externalRotation;
-    float rotateSpeed;
-    float speed;
-    int jumpsInAir;
-    int maxJumpsInAir = 1;
+    private float airborneTime;
+    private float externalRotation;
+    private float rotateSpeed;
+    private float speed;
+    private int jumpsInAir;
+    private int maxJumpsInAir = 1;
     bool airborne;
     bool inputEnabled = true;
     Vector3 externalMotion;
@@ -33,24 +33,19 @@ public class PlayerMovements : MonoBehaviour
     InputType inputType = InputType.Tank;
 
     //Анимация
-    public Animator anim;
-    bool isAttack = false; 
+    private Animator anim;
+    //bool isAttack = false; 
 
     // На здоровье 
-    public float health = 1f;
-    bool isDie = false;
-    public Image HealthBar;
-    public float fill;
+    [HideInInspector]
+    public float health;
+    
 
     //Рычаг
     private GameObject lever;
+    [HideInInspector]
     public GameObject LeverRotation;
     Transform rotate;
-
-    //Монстры
-    public float damage;
-    public LayerMask mask;
-    GameObject MonsterAttack;
 
     void Awake()
     {
@@ -70,10 +65,9 @@ public class PlayerMovements : MonoBehaviour
 
     void Update()
     {
+        if (!(health > 0))
+            return;
         
-        if(health > 0)
-        {
-            
             if (inputEnabled)
             {
                 switch (inputType)
@@ -121,11 +115,9 @@ public class PlayerMovements : MonoBehaviour
                     {
                         moveDelta.y = jumpSpeed;
                         airborne = true;
-                        airborneTime = coyoteDelay;
+                        airborneTime = СoyoteDelay;
                     }
-                }
-
-              
+                } 
             }
             var wasGrounded = controller.isGrounded;
 
@@ -150,7 +142,7 @@ public class PlayerMovements : MonoBehaviour
             }
 
             // Прыжки
-            airborne = airborneTime >= coyoteDelay;
+            airborne = airborneTime >= СoyoteDelay;
 
             // Повороты направо, налево
             transform.Rotate(0, (rotateSpeed + externalRotation) * Time.deltaTime, 0);
@@ -158,52 +150,10 @@ public class PlayerMovements : MonoBehaviour
             //Анимация
             anim.SetFloat("Speed", speed);
 
-            //Удар
-            if (Input.GetMouseButtonDown(0))
-            {
-                StartCoroutine(AttackToMonster());
-                isAttack = true;
-            }
-            else
-            {
-                isAttack = false;
-            }
-            anim.SetBool("isAttack", isAttack);
-            Debug.Log(isAttack);
             //Pычаг у дерева
             float direction = lever.transform.position.x - transform.position.x;
             if (Input.GetKeyDown(KeyCode.E) && (Mathf.Abs(direction) < 1))
-            rotate.rotation = Quaternion.Euler(0, 0, -19);
-
-            // На здоровье 
-            HealthBar.fillAmount = health;
-        }
-
-        
-    }
-
-    public void Damage(float damage)
-    {
-        health -= damage * Time.deltaTime;
-
-        if (health <= 0)
-        {
-            health = 0;
-            isDie = true;
-            anim.SetBool("isDie", isDie);
-        }
-
-    }
-    
-    IEnumerator AttackToMonster()
-    {
-        if (Physics.Raycast(transform.position, transform.forward, out var hit, 1f))
-        {
-            var enemy = hit.transform.gameObject.GetComponent<MonsterAttack>();
-            enemy.transform.gameObject.GetComponent<MonsterAttack>().DamageMonster(damage);
-            Debug.Log(enemy);
-        }
-        yield return new WaitForSeconds(3);
+            rotate.rotation = Quaternion.Euler(0, 0, -19);   
     }
 }
 

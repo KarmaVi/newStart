@@ -2,7 +2,7 @@
 
 public class MonSpawner : MonoBehaviour
 {
-    [SerializeField]
+    [HideInInspector]
     private GameObject _mon;
 
     private void Update()

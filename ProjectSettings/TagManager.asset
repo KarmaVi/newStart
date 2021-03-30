@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Lever
   - Monster
+  - cure
+  - Checkpoint
   layers:
   - Default
   - TransparentFX

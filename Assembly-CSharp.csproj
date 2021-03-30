@@ -64,11 +64,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\AurynSky\Gems Ultimate Pack\Scripts\AnimationScript.cs" />
+    <Compile Include="Assets\Scripts\AnimationScript.cs" />
+    <Compile Include="Assets\Scripts\AttackToMonsters.cs" />
     <Compile Include="Assets\Scripts\BeholderPBRmmob.cs" />
+    <Compile Include="Assets\Scripts\FoxSave.cs" />
     <Compile Include="Assets\Scripts\MonAttack.cs" />
     <Compile Include="Assets\Scripts\MonSpawner.cs" />
     <Compile Include="Assets\Scripts\MonsterAttack.cs" />
+    <Compile Include="Assets\Scripts\PlayerHealth.cs" />
     <Compile Include="Assets\Scripts\PlayerMovements.cs" />
     <Compile Include="Assets\Scripts\ScriptsHome\BoomMushroom.cs" />
     <Compile Include="Assets\Scripts\ScriptsHome\MushroomCall.cs" />
