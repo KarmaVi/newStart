@@ -26,7 +26,7 @@ public class AnimationScript : MonoBehaviour {
 	private float scaleTimer;
 	private GameObject player;
 	private float heart;
-
+	public GameObject Heart;
 	private void Awake()
 	{
 		player = GameObject.FindWithTag("Player");
@@ -37,12 +37,12 @@ public class AnimationScript : MonoBehaviour {
 	{
 		heart = 0.2f;
 		player.GetComponent<PlayerHealth>().AddJustCurrntHealth(heart);
-		//Destroy(this);
+		//Heart.gameObject.SetActive(false);
 	}
 	
-	void Update () {
+	public void Update () {
 
-		if(isAnimated)
+		if (isAnimated)
 		{
 			if(isRotating)
 			{
@@ -89,6 +89,8 @@ public class AnimationScript : MonoBehaviour {
 					else if (!scalingUp) { scalingUp = true; }
 					scaleTimer = 0;
 				}
+				
+				//Destroy(player.gameObject);
 			}
 		}
 	}

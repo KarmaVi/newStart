@@ -8,6 +8,7 @@ TagManager:
   - Monster
   - cure
   - Checkpoint
+  - GM
   layers:
   - Default
   - TransparentFX

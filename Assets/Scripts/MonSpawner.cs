@@ -3,7 +3,7 @@
 public class MonSpawner : MonoBehaviour
 {
     [HideInInspector]
-    private GameObject _mon;
+    public GameObject _mon;
 
     private void Update()
     {
