@@ -6,8 +6,8 @@ public class AnimationScript : MonoBehaviour {
 	public bool isAnimated = true;
 
 	public bool isRotating = true;
-	public bool isFloating = false;
-	public bool isScaling = false;
+	public bool isFloating;
+	public bool isScaling;
 
 	public Vector3 rotationAngle;
 	public float rotationSpeed;
@@ -25,8 +25,7 @@ public class AnimationScript : MonoBehaviour {
 	public float scaleRate;
 	private float scaleTimer;
 	private GameObject player;
-	private float heart;
-	public GameObject Heart;
+	private float heart = 0.2f;
 	private void Awake()
 	{
 		player = GameObject.FindWithTag("Player");
@@ -35,9 +34,11 @@ public class AnimationScript : MonoBehaviour {
 
 	private void OnTriggerStay(Collider other)
 	{
-		heart = 0.2f;
-		player.GetComponent<PlayerHealth>().AddJustCurrntHealth(heart);
-		//Heart.gameObject.SetActive(false);
+		if (gameObject.activeInHierarchy)
+		{
+			player.GetComponent<PlayerHealth>().AddJustCurrntHealth(heart);
+			gameObject.SetActive(false);
+		}	
 	}
 	
 	public void Update () {

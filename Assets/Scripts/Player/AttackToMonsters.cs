@@ -9,9 +9,8 @@ public class AttackToMonsters : MonoBehaviour
     public float damage;
     [HideInInspector]
     public LayerMask mask;
-    bool isAttack = false;
-    GameObject MonsterAttack;
-
+    private bool isAttack;
+    
     private void Awake()
     {
         anim = GetComponent<Animator>();
@@ -36,7 +35,8 @@ public class AttackToMonsters : MonoBehaviour
         if (Physics.Raycast(transform.position, transform.forward, out var hit, 1f))
         {
             var enemy = hit.transform.gameObject.GetComponent<MonsterAttack>();
-            enemy.transform.gameObject.GetComponent<MonsterAttack>().DamageMonster(damage);
+            if(enemy != null)
+                enemy.transform.gameObject.GetComponent<MonsterAttack>().DamageMonster(damage);
         }
         yield return new WaitForSeconds(3);
     }
