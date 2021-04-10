@@ -9,7 +9,10 @@ public class PlayerPosition : MonoBehaviour
     public void Awake()
     {
         gm = GameObject.FindWithTag("GM").GetComponent<GameMaster>();
-        transform.position = gm.lastCheckPointPos;
+
+        var newPosition = new Vector3(PlayerPrefs.GetFloat("posX"), -0.01f, 0.673f);
+        transform.position = newPosition;
+        //transform.position = gm.lastCheckPointPos;
     }
     private void Update()
     {

@@ -24,9 +24,6 @@ public class PlayerHealth : MonoBehaviour
 
         if (health >= 1)
             health = 1;
-
-        
-
         HealthBar.fillAmount = health;    
     }
 
@@ -38,6 +35,7 @@ public class PlayerHealth : MonoBehaviour
         {
             isDie = true;
             anim.SetBool("isDie", isDie);
+            gameObject.GetComponent<PlayerMovements>().health = health;
         }
         HealthBar.fillAmount = health;
     }

@@ -2,11 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+
 public class GameMaster : MonoBehaviour
 {
-    private static GameMaster instance;
+    [HideInInspector]
+    public static GameMaster instance;
+    [HideInInspector]
     public Vector3 lastCheckPointPos;
-
+   
     private void Awake()
     {
         if(instance == null)
@@ -19,4 +23,5 @@ public class GameMaster : MonoBehaviour
             Destroy(gameObject);
         }
     }
+   
 }

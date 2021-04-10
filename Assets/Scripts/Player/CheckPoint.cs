@@ -5,6 +5,9 @@ using UnityEngine;
 public class CheckPoint : MonoBehaviour
 {
     private GameMaster gm;
+    private GameObject _particle;
+    
+
 
     public void Awake()
     {
@@ -15,7 +18,11 @@ public class CheckPoint : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            _particle.Play();
             gm.lastCheckPointPos = transform.position;
+            PlayerPrefs.SetFloat("posX", transform.position.x);
+            PlayerPrefs.SetFloat("posY", transform.position.y);
+            PlayerPrefs.SetFloat("posZ", transform.position.z);
         }
     }
 }
